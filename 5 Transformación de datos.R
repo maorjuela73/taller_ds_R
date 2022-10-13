@@ -43,4 +43,12 @@ mutate(menu,
        precio_con_descuento = precio * 0.4, 
        precio_con_desc_e_iva = precio_con_descuento + precio_con_descuento*0.19)
 
+summarize(df, total = sum(value))
+
+
+consumo <- read_xlsx(path = "C:/Users/maorj/Desktop/URosario Taller Data Science en R 2022-10/datos-restaurante.xlsx",
+                     sheet = "consumo")
+View(consumo)
+
+summarize(consumo, total_pr_vendidos = sum(cantidad))
 
