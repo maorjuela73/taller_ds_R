@@ -52,3 +52,25 @@ View(consumo)
 
 summarize(consumo, total_pr_vendidos = sum(cantidad))
 
+por_reserva <- group_by(consumo, numero_reserva)
+por_reserva
+
+summarize(por_reserva, total = sum(cantidad), prod_diferentes = n())
+
+mean( c(1,2,3,4,5,NA) , na.rm = TRUE)
+
+# pipe
+
+8
+sqrt(8)
+log(sqrt(8))
+round(log(sqrt(8)),2)
+
+8 %>% 
+  sqrt() %>% 
+  log() %>% 
+  round(2)
+
+
+
+
